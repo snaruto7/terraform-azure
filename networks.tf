@@ -1,6 +1,6 @@
 resource "azurerm_virtual_network" "snaruto7-virt" {
   address_space       = ["10.0.0.0/16"]
-  location            = "West India"
+  location            = "${var.location}"
   name                = "snaruto7virt"
   resource_group_name = "${azurerm_resource_group.azy_network.name}"
   dns_servers         = ["10.0.0.4", "10.0.0.5"]

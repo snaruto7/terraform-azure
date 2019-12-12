@@ -16,6 +16,6 @@ resource "azurerm_virtual_network" "snaruto7-virt" {
   }
 
   tags = {
-    environement = "pwc"
+    environement = "dev"
   }
 }

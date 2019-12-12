@@ -4,6 +4,8 @@
 
 terraform fmt  #Formatting code for terraform
 
-terraform plan #Optional summary for diff checking
-
-echo "yes" | terraform apply #Applying changes
+if terraform plan; ["$?" -eq 0]; then #Optional summary for diff checking
+    echo "yes" | terraform apply #Applying changes
+else
+    exit
+fi
